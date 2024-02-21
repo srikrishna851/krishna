@@ -1,0 +1,10 @@
+12:10:09 **** Incremental Build of configuration Debug for project Photo _sensor ****
+make -j4 all 
+arm-none-eabi-size   Photo\ _sensor.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8944	     20	   1572	  10536	   2928	Photo _sensor.elf
+Finished building: default.size.stdout
+ 
+
+12:10:09 Build Finished. 0 errors, 0 warnings. (took 165ms)
+

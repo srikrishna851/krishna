@@ -1,0 +1,45 @@
+16:57:58 **** Incremental Build of configuration Debug for project 7 segment ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_GPIO_EXTI_Falling_Callback':
+../Core/Src/main.c:89:20: error: 'USER_BUTTON_Pin' undeclared (first use in this function)
+   89 |   if ( GPIO_Pin == USER_BUTTON_Pin) {
+      |                    ^~~~~~~~~~~~~~~
+../Core/Src/main.c:89:20: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c: In function 'SystemClock_Config':
+../Core/Src/main.c:181:20: error: 'RCC_OscInitTypeDef' has no member named 'HSIDiv'
+  181 |   RCC_OscInitStruct.HSIDiv = RCC_HSI_DIV1;
+      |                    ^
+../Core/Src/main.c:181:30: error: 'RCC_HSI_DIV1' undeclared (first use in this function); did you mean 'RCC_MCO_DIV1'?
+  181 |   RCC_OscInitStruct.HSIDiv = RCC_HSI_DIV1;
+      |                              ^~~~~~~~~~~~
+      |                              RCC_MCO_DIV1
+../Core/Src/main.c:185:32: error: 'RCC_PLLM_DIV1' undeclared (first use in this function); did you mean 'RCC_PLLP_DIV2'?
+  185 |   RCC_OscInitStruct.PLL.PLLM = RCC_PLLM_DIV1;
+      |                                ^~~~~~~~~~~~~
+      |                                RCC_PLLP_DIV2
+../Core/Src/main.c:188:32: error: 'RCC_PLLQ_DIV2' undeclared (first use in this function); did you mean 'RCC_PLLP_DIV2'?
+  188 |   RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
+      |                                ^~~~~~~~~~~~~
+      |                                RCC_PLLP_DIV2
+../Core/Src/main.c:189:32: error: 'RCC_PLLR_DIV2' undeclared (first use in this function); did you mean 'RCC_PLLP_DIV2'?
+  189 |   RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
+      |                                ^~~~~~~~~~~~~
+      |                                RCC_PLLP_DIV2
+../Core/Src/main.c: In function 'MX_GPIO_Init':
+../Core/Src/main.c:226:25: error: 'USER_BUTTON_Pin' undeclared (first use in this function)
+  226 |   GPIO_InitStruct.Pin = USER_BUTTON_Pin;
+      |                         ^~~~~~~~~~~~~~~
+../Core/Src/main.c:229:17: error: 'USER_BUTTON_GPIO_Port' undeclared (first use in this function); did you mean 'USART_RX_GPIO_Port'?
+  229 |   HAL_GPIO_Init(USER_BUTTON_GPIO_Port, &GPIO_InitStruct);
+      |                 ^~~~~~~~~~~~~~~~~~~~~
+      |                 USART_RX_GPIO_Port
+../Core/Src/main.c:241:24: error: 'EXTI4_15_IRQn' undeclared (first use in this function); did you mean 'EXTI9_5_IRQn'?
+  241 |   HAL_NVIC_SetPriority(EXTI4_15_IRQn, 1, 0);
+      |                        ^~~~~~~~~~~~~
+      |                        EXTI9_5_IRQn
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+16:57:58 Build Failed. 10 errors, 0 warnings. (took 325ms)
+

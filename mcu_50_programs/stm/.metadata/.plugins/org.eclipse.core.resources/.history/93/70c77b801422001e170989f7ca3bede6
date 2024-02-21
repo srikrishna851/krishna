@@ -1,0 +1,11 @@
+#include "stm32f4xx.h"
+void delayms(int n);
+#define GPIOA_EN (1<<0)
+#define PA5_MOD (0X01 << 10)
+while(1)
+{
+	GPIOA->ODR |=(1<<5);
+	delayms(1000);
+	GPIOA->ODR &=~(1<<5);
+	delayms(1000);
+}

@@ -1,0 +1,2 @@
+../Core/Src/gpio.c:3:6:led_on	4	static
+../Core/Src/gpio.c:7:6:led_off	4	static

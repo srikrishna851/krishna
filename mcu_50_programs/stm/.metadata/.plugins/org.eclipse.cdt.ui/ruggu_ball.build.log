@@ -1,0 +1,10 @@
+14:36:19 **** Incremental Build of configuration Debug for project ruggu_ball ****
+make -j4 all 
+arm-none-eabi-size   ruggu_ball.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9000	     20	   1636	  10656	   29a0	ruggu_ball.elf
+Finished building: default.size.stdout
+ 
+
+14:36:19 Build Finished. 0 errors, 0 warnings. (took 170ms)
+

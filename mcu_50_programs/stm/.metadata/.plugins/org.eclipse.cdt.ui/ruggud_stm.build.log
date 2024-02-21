@@ -1,0 +1,10 @@
+12:30:45 **** Incremental Build of configuration Debug for project ruggud_stm ****
+make -j4 all 
+arm-none-eabi-size   ruggud_stm.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1184	     12	   1572	   2768	    ad0	ruggud_stm.elf
+Finished building: default.size.stdout
+ 
+
+12:30:46 Build Finished. 0 errors, 0 warnings. (took 304ms)
+

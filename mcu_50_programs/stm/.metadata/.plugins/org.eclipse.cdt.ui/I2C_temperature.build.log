@@ -1,0 +1,188 @@
+11:19:52 **** Incremental Build of configuration Debug for project I2C_temperature ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:3:1: error: unknown type name 'Skip'
+    3 | Skip to content
+      | ^~~~
+../Core/Src/main.c:3:9: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'content'
+    3 | Skip to content
+      |         ^~~~~~~
+../Core/Src/main.c:3:9: error: unknown type name 'content'; did you mean 'const'?
+    3 | Skip to content
+      |         ^~~~~~~
+      |         const
+In file included from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:156,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:275,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:14:
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h:163:3: warning: data definition has no type or storage class
+  163 | } IRQn_Type;
+      |   ^~~~~~~~~
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h:163:3: warning: type defaults to 'int' in declaration of 'IRQn_Type' [-Wimplicit-int]
+In file included from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h:169,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:156,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:275,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:14:
+../Drivers/CMSIS/Include/core_cm4.h:1688:39: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1688 | __STATIC_INLINE void __NVIC_EnableIRQ(IRQn_Type IRQn)
+      |                                       ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1705:46: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1705 | __STATIC_INLINE uint32_t __NVIC_GetEnableIRQ(IRQn_Type IRQn)
+      |                                              ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1724:40: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1724 | __STATIC_INLINE void __NVIC_DisableIRQ(IRQn_Type IRQn)
+      |                                        ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1743:47: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1743 | __STATIC_INLINE uint32_t __NVIC_GetPendingIRQ(IRQn_Type IRQn)
+      |                                               ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1762:43: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1762 | __STATIC_INLINE void __NVIC_SetPendingIRQ(IRQn_Type IRQn)
+      |                                           ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1777:45: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1777 | __STATIC_INLINE void __NVIC_ClearPendingIRQ(IRQn_Type IRQn)
+      |                                             ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1794:43: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1794 | __STATIC_INLINE uint32_t __NVIC_GetActive(IRQn_Type IRQn)
+      |                                           ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1816:41: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1816 | __STATIC_INLINE void __NVIC_SetPriority(IRQn_Type IRQn, uint32_t priority)
+      |                                         ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1838:45: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1838 | __STATIC_INLINE uint32_t __NVIC_GetPriority(IRQn_Type IRQn)
+      |                                             ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1913:39: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1913 | __STATIC_INLINE void __NVIC_SetVector(IRQn_Type IRQn, uint32_t vector)
+      |                                       ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:1928:43: error: expected declaration specifiers or '...' before 'IRQn_Type'
+ 1928 | __STATIC_INLINE uint32_t __NVIC_GetVector(IRQn_Type IRQn)
+      |                                           ^~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h: In function 'SysTick_Config':
+../Drivers/CMSIS/Include/core_cm4.h:1621:39: warning: implicit declaration of function '__NVIC_SetPriority'; did you mean 'NVIC_SetPriority'? [-Wimplicit-function-declaration]
+ 1621 |   #define NVIC_SetPriority            __NVIC_SetPriority
+      |                                       ^~~~~~~~~~~~~~~~~~
+../Drivers/CMSIS/Include/core_cm4.h:2030:3: note: in expansion of macro 'NVIC_SetPriority'
+ 2030 |   NVIC_SetPriority (SysTick_IRQn, (1UL << __NVIC_PRIO_BITS) - 1UL); /* set Priority for Systick Interrupt */
+      |   ^~~~~~~~~~~~~~~~
+In file included from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h:169,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:156,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h:29,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:27,
+                 from ../Core/Inc/stm32f4xx_hal_conf.h:275,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:14:
+../Drivers/CMSIS/Include/core_cm4.h:2030:21: error: 'SysTick_IRQn' undeclared (first use in this function); did you mean 'SysTick_Type'?
+ 2030 |   NVIC_SetPriority (SysTick_IRQn, (1UL << __NVIC_PRIO_BITS) - 1UL); /* set Priority for Systick Interrupt */
+      |                     ^~~~~~~~~~~~
+      |                     SysTick_Type
+../Drivers/CMSIS/Include/core_cm4.h:2030:21: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:291,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:14:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h: At top level:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:261:27: error: expected declaration specifiers or '...' before 'IRQn_Type'
+  261 | void HAL_NVIC_SetPriority(IRQn_Type IRQn, uint32_t PreemptPriority, uint32_t SubPriority);
+      |                           ^~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:262:25: error: expected declaration specifiers or '...' before 'IRQn_Type'
+  262 | void HAL_NVIC_EnableIRQ(IRQn_Type IRQn);
+      |                         ^~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:263:26: error: expected declaration specifiers or '...' before 'IRQn_Type'
+  263 | void HAL_NVIC_DisableIRQ(IRQn_Type IRQn);
+      |                          ^~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:275:27: error: expected declaration specifiers or '...' before 'IRQn_Type'
+  275 | void HAL_NVIC_GetPriority(IRQn_Type IRQn, uint32_t PriorityGroup, uint32_t* pPreemptPriority, uint32_t* pSubPriority);
+      |                           ^~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:276:33: error: expected declaration specifiers or '...' before 'IRQn_Type'
+  276 | uint32_t HAL_NVIC_GetPendingIRQ(IRQn_Type IRQn);
+      |                                 ^~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:277:29: error: expected declaration specifiers or '...' before 'IRQn_Type'
+  277 | void HAL_NVIC_SetPendingIRQ(IRQn_Type IRQn);
+      |                             ^~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:278:31: error: expected declaration specifiers or '...' before 'IRQn_Type'
+  278 | void HAL_NVIC_ClearPendingIRQ(IRQn_Type IRQn);
+      |                               ^~~~~~~~~
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h:279:29: error: expected declaration specifiers or '...' before 'IRQn_Type'
+  279 | uint32_t HAL_NVIC_GetActive(IRQn_Type IRQn);
+      |                             ^~~~~~~~~
+../Core/Src/main.c:33:1: error: unknown type name 'I2C_HandleTypeDef'; did you mean 'DMA_HandleTypeDef'?
+   33 | I2C_HandleTypeDef hi2c1;
+      | ^~~~~~~~~~~~~~~~~
+      | DMA_HandleTypeDef
+../Core/Src/main.c: In function 'read_sensor_values':
+../Core/Src/main.c:67:5: warning: implicit declaration of function 'HAL_I2C_Master_Transmit' [-Wimplicit-function-declaration]
+   67 |     HAL_I2C_Master_Transmit(&hi2c1, AHT25_ADDR,&cmd, 1, HAL_MAX_DELAY);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:69:5: warning: implicit declaration of function 'HAL_I2C_Master_Receive' [-Wimplicit-function-declaration]
+   69 |     HAL_I2C_Master_Receive(&hi2c1,0x71, data, 6, HAL_MAX_DELAY);
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:106:12: warning: implicit declaration of function 'HAL_I2C_IsDeviceReady' [-Wimplicit-function-declaration]
+  106 |         if(HAL_I2C_IsDeviceReady(&hi2c1, 0x70,2,18)!=HAL_OK)
+      |            ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'MX_I2C1_Init':
+../Core/Src/main.c:176:8: error: request for member 'Instance' in something not a structure or union
+  176 |   hi2c1.Instance = I2C1;
+      |        ^
+../Core/Src/main.c:177:8: error: request for member 'Init' in something not a structure or union
+  177 |   hi2c1.Init.ClockSpeed = 100000;
+      |        ^
+../Core/Src/main.c:178:8: error: request for member 'Init' in something not a structure or union
+  178 |   hi2c1.Init.DutyCycle = I2C_DUTYCYCLE_2;
+      |        ^
+../Core/Src/main.c:178:26: error: 'I2C_DUTYCYCLE_2' undeclared (first use in this function)
+  178 |   hi2c1.Init.DutyCycle = I2C_DUTYCYCLE_2;
+      |                          ^~~~~~~~~~~~~~~
+../Core/Src/main.c:179:8: error: request for member 'Init' in something not a structure or union
+  179 |   hi2c1.Init.OwnAddress1 = 0;
+      |        ^
+../Core/Src/main.c:180:8: error: request for member 'Init' in something not a structure or union
+  180 |   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+      |        ^
+../Core/Src/main.c:180:31: error: 'I2C_ADDRESSINGMODE_7BIT' undeclared (first use in this function)
+  180 |   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:181:8: error: request for member 'Init' in something not a structure or union
+  181 |   hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+      |        ^
+../Core/Src/main.c:181:32: error: 'I2C_DUALADDRESS_DISABLE' undeclared (first use in this function); did you mean 'I2C_DUALADDRESS_DISABLED'?
+  181 |   hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~
+      |                                I2C_DUALADDRESS_DISABLED
+../Core/Src/main.c:182:8: error: request for member 'Init' in something not a structure or union
+  182 |   hi2c1.Init.OwnAddress2 = 0;
+      |        ^
+../Core/Src/main.c:183:8: error: request for member 'Init' in something not a structure or union
+  183 |   hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+      |        ^
+../Core/Src/main.c:183:32: error: 'I2C_GENERALCALL_DISABLE' undeclared (first use in this function); did you mean 'I2C_GENERALCALL_DISABLED'?
+  183 |   hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~
+      |                                I2C_GENERALCALL_DISABLED
+../Core/Src/main.c:184:8: error: request for member 'Init' in something not a structure or union
+  184 |   hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+      |        ^
+../Core/Src/main.c:184:30: error: 'I2C_NOSTRETCH_DISABLE' undeclared (first use in this function); did you mean 'I2C_NOSTRETCH_DISABLED'?
+  184 |   hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
+      |                              ^~~~~~~~~~~~~~~~~~~~~
+      |                              I2C_NOSTRETCH_DISABLED
+../Core/Src/main.c:185:7: warning: implicit declaration of function 'HAL_I2C_Init'; did you mean 'HAL_LIN_Init'? [-Wimplicit-function-declaration]
+  185 |   if (HAL_I2C_Init(&hi2c1) != HAL_OK)
+      |       ^~~~~~~~~~~~
+      |       HAL_LIN_Init
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:250:5: error: expected '=', ',', ';', 'asm' or '__attribute__' before '.' token
+  250 | main.c
+      |     ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+11:19:53 Build Failed. 40 errors, 7 warnings. (took 472ms)
+

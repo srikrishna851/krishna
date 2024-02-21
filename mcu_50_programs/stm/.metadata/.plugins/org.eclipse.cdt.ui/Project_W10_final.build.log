@@ -1,0 +1,10 @@
+11:26:02 **** Incremental Build of configuration Debug for project Project_W10_final ****
+make -j4 all 
+arm-none-eabi-size   Project_W10_final.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41476	    480	  18520	  60476	   ec3c	Project_W10_final.elf
+Finished building: default.size.stdout
+ 
+
+11:26:03 Build Finished. 0 errors, 0 warnings. (took 170ms)
+

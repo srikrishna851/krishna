@@ -1,0 +1,140 @@
+12:03:48 **** Incremental Build of configuration Debug for project Project_w10 ****
+make -j4 all 
+arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/tasks.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/tasks.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/tasks.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/tasks.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:142:3: warning: implicit declaration of function 'WE10_Init' [-Wimplicit-function-declaration]
+  142 |   WE10_Init("ssk","colorful");
+      |   ^~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c: In function 'main':
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:142:3: warning: implicit declaration of function 'WE10_Init' [-Wimplicit-function-declaration]
+  142 |   WE10_Init("POCO X3","123456789");
+      |   ^~~~~~~~~
+../Core/Src/main.c:143:5: warning: implicit declaration of function 'MQTT_Init' [-Wimplicit-function-declaration]
+  143 |     MQTT_Init();
+      |     ^~~~~~~~~
+In file included from ../Core/Src/main.c:21:
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:416:10: warning: initialization of 'void (*)(const void *)' from incompatible pointer type 'void (*)(void *)' [-Wincompatible-pointer-types]
+  416 | { #name, (thread), (priority), (instances), (stacksz), NULL, NULL }
+      |          ^
+../Core/Src/main.c:169:3: note: in expansion of macro 'osThreadDef'
+  169 |   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
+      |   ^~~~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:416:10: note: (near initialization for 'os_thread_def_defaultTask.pthread')
+  416 | { #name, (thread), (priority), (instances), (stacksz), NULL, NULL }
+      |          ^
+../Core/Src/main.c:169:3: note: in expansion of macro 'osThreadDef'
+  169 |   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
+      |   ^~~~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:416:10: warning: initialization of 'void (*)(const void *)' from incompatible pointer type 'void (*)(void *)' [-Wincompatible-pointer-types]
+  416 | { #name, (thread), (priority), (instances), (stacksz), NULL, NULL }
+      |          ^
+../Core/Src/main.c:173:3: note: in expansion of macro 'osThreadDef'
+  173 |   osThreadDef(recive_temp_tas, recive_temp, osPriorityIdle, 0, 128);
+      |   ^~~~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:416:10: note: (near initialization for 'os_thread_def_recive_temp_tas.pthread')
+  416 | { #name, (thread), (priority), (instances), (stacksz), NULL, NULL }
+      |          ^
+../Core/Src/main.c:173:3: note: in expansion of macro 'osThreadDef'
+  173 |   osThreadDef(recive_temp_tas, recive_temp, osPriorityIdle, 0, 128);
+      |   ^~~~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:416:10: warning: initialization of 'void (*)(const void *)' from incompatible pointer type 'void (*)(void *)' [-Wincompatible-pointer-types]
+  416 | { #name, (thread), (priority), (instances), (stacksz), NULL, NULL }
+      |          ^
+../Core/Src/main.c:178:3: note: in expansion of macro 'osThreadDef'
+  178 |   osThreadDef(send_temp2, send_temp, osPriorityIdle, 0, 128);
+      |   ^~~~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:416:10: note: (near initialization for 'os_thread_def_send_temp2.pthread')
+  416 | { #name, (thread), (priority), (instances), (stacksz), NULL, NULL }
+      |          ^
+../Core/Src/main.c:178:3: note: in expansion of macro 'osThreadDef'
+  178 |   osThreadDef(send_temp2, send_temp, osPriorityIdle, 0, 128);
+      |   ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:236:6: warning: conflicting types for 'WE10_Init'; have 'void(char *, char *)'
+  236 | void WE10_Init (char *SSID, char *PASSWD)
+      |      ^~~~~~~~~
+../Core/Src/main.c:142:3: note: previous implicit declaration of 'WE10_Init' with type 'void(char *, char *)'
+  142 |   WE10_Init("ssk","colorful");
+      |   ^~~~~~~~~
+../Core/Src/main.c: In function 'WE10_Init':
+../Core/Src/main.c:261:30: warning: too many arguments for format [-Wformat-extra-args]
+  261 |         sprintf (&buffer[0], "CMD+CONTOAP=SBCS.2.4.GHz,SBCS@1234\r\n", SSID, PASSWD);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:284:6: warning: conflicting types for 'MQTT_Init'; have 'void()'
+  284 | void MQTT_Init()
+      |      ^~~~~~~~~
+../Core/Src/main.c:143:5: note: previous implicit declaration of 'MQTT_Init' with type 'void()'
+  143 |     MQTT_Init();
+      |     ^~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:143:5: warning: implicit declaration of function 'MQTT_Init' [-Wimplicit-function-declaration]
+  143 |     MQTT_Init();
+      |     ^~~~~~~~~
+In file included from ../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:21:
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:416:10: warning: initialization of 'void (*)(const void *)' from incompatible pointer type 'void (*)(void *)' [-Wincompatible-pointer-types]
+  416 | { #name, (thread), (priority), (instances), (stacksz), NULL, NULL }
+      |          ^
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:169:3: note: in expansion of macro 'osThreadDef'
+  169 |   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
+      |   ^~~~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:416:10: note: (near initialization for 'os_thread_def_defaultTask.pthread')
+  416 | { #name, (thread), (priority), (instances), (stacksz), NULL, NULL }
+      |          ^
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:169:3: note: in expansion of macro 'osThreadDef'
+  169 |   osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
+      |   ^~~~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:416:10: warning: initialization of 'void (*)(const void *)' from incompatible pointer type 'void (*)(void *)' [-Wincompatible-pointer-types]
+  416 | { #name, (thread), (priority), (instances), (stacksz), NULL, NULL }
+      |          ^
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:173:3: note: in expansion of macro 'osThreadDef'
+  173 |   osThreadDef(recive_temp_tas, recive_temp, osPriorityIdle, 0, 128);
+      |   ^~~~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:416:10: note: (near initialization for 'os_thread_def_recive_temp_tas.pthread')
+  416 | { #name, (thread), (priority), (instances), (stacksz), NULL, NULL }
+      |          ^
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:173:3: note: in expansion of macro 'osThreadDef'
+  173 |   osThreadDef(recive_temp_tas, recive_temp, osPriorityIdle, 0, 128);
+      |   ^~~~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:416:10: warning: initialization of 'void (*)(const void *)' from incompatible pointer type 'void (*)(void *)' [-Wincompatible-pointer-types]
+  416 | { #name, (thread), (priority), (instances), (stacksz), NULL, NULL }
+      |          ^
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:178:3: note: in expansion of macro 'osThreadDef'
+  178 |   osThreadDef(send_temp2, send_temp, osPriorityIdle, 0, 128);
+      |   ^~~~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:416:10: note: (near initialization for 'os_thread_def_send_temp2.pthread')
+  416 | { #name, (thread), (priority), (instances), (stacksz), NULL, NULL }
+      |          ^
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:178:3: note: in expansion of macro 'osThreadDef'
+  178 |   osThreadDef(send_temp2, send_temp, osPriorityIdle, 0, 128);
+      |   ^~~~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c: At top level:
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:237:6: warning: conflicting types for 'WE10_Init'; have 'void(char *, char *)'
+  237 | void WE10_Init (char *SSID, char *PASSWD)
+      |      ^~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:142:3: note: previous implicit declaration of 'WE10_Init' with type 'void(char *, char *)'
+  142 |   WE10_Init("POCO X3","123456789");
+      |   ^~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c: In function 'WE10_Init':
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:262:30: warning: too many arguments for format [-Wformat-extra-args]
+  262 |         sprintf (&buffer[0], "CMD+CONTOAP=rebel,kalyanttt\r\n", SSID, PASSWD);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c: At top level:
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:295:6: warning: conflicting types for 'MQTT_Init'; have 'void()'
+  295 | void MQTT_Init()
+      |      ^~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:143:5: note: previous implicit declaration of 'MQTT_Init' with type 'void()'
+  143 |     MQTT_Init();
+      |     ^~~~~~~~~
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:652:9: error: unterminated comment
+  652 |  #endif /* USE_FULL_ASSERT *
+      |         ^
+../Middlewares/Third_Party/FreeRTOS/Source/tasks.c:282:14: warning: 'mqtt_data_send' defined but not used [-Wunused-function]
+  282 |         void mqtt_data_send()
+      |              ^~~~~~~~~~~~~~
+make: *** [Middlewares/Third_Party/FreeRTOS/Source/subdir.mk:37: Middlewares/Third_Party/FreeRTOS/Source/tasks.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+12:03:48 Build Failed. 3 errors, 17 warnings. (took 370ms)
+

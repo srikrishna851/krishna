@@ -1,0 +1,14 @@
+#include"stm32f4xx.h"
+void GPIOA_PA5_int(void)
+{
+	RCC->AHB1ENR |=GPIOA_EN;
+	RCC->AHB1ENR |=PA5_MOD;
+}
+void led_on(void)
+{
+	GPIOA->ODR |=(1<<5);
+}
+void led_off(void)
+{
+	GPIOA->ODR &=~(1<<5);
+}

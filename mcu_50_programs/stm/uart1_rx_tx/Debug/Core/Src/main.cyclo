@@ -1,0 +1,4 @@
+../Core/Src/main.c:6:5:main	1
+../Core/Src/main.c:17:6:usart1_init	1
+../Core/Src/main.c:33:6:usart1_write	2
+../Core/Src/main.c:39:6:usart1_read	2

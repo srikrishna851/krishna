@@ -1,0 +1,10 @@
+16:58:00 **** Incremental Build of configuration Debug for project RFID_string ****
+make -j4 all 
+arm-none-eabi-size   RFID_string.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1216	     12	   1572	   2800	    af0	RFID_string.elf
+Finished building: default.size.stdout
+ 
+
+16:58:01 Build Finished. 0 errors, 0 warnings. (took 173ms)
+

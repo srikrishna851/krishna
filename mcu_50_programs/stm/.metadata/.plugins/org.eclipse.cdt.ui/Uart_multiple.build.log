@@ -1,0 +1,10 @@
+16:58:04 **** Incremental Build of configuration Debug for project Uart_multiple ****
+make -j4 all 
+arm-none-eabi-size   Uart_multiple.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1100	     12	   1572	   2684	    a7c	Uart_multiple.elf
+Finished building: default.size.stdout
+ 
+
+16:58:04 Build Finished. 0 errors, 0 warnings. (took 173ms)
+

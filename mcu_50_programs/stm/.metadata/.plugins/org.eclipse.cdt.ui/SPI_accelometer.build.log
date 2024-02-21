@@ -1,0 +1,10 @@
+16:58:02 **** Incremental Build of configuration Debug for project SPI_accelometer ****
+make -j4 all 
+arm-none-eabi-size   SPI_accelometer.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3432	     12	   1616	   5060	   13c4	SPI_accelometer.elf
+Finished building: default.size.stdout
+ 
+
+16:58:02 Build Finished. 0 errors, 0 warnings. (took 174ms)
+

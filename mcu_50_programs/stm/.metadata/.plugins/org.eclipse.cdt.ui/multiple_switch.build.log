@@ -1,0 +1,10 @@
+16:58:06 **** Incremental Build of configuration Debug for project multiple_switch ****
+make -j4 all 
+arm-none-eabi-size   multiple_switch.elf 
+   text	   data	    bss	    dec	    hex	filename
+    976	     12	   1572	   2560	    a00	multiple_switch.elf
+Finished building: default.size.stdout
+ 
+
+16:58:07 Build Finished. 0 errors, 0 warnings. (took 175ms)
+

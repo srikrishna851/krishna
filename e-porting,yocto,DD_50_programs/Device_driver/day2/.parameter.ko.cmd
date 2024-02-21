@@ -1,0 +1,1 @@
+cmd_/home/srikrishna/Device_driver/day2/parameter.ko := arm-poky-linux-musleabi-ld -r  -EL  --build-id=sha1  -T scripts/module.lds -o /home/srikrishna/Device_driver/day2/parameter.ko /home/srikrishna/Device_driver/day2/parameter.o /home/srikrishna/Device_driver/day2/parameter.mod.o;  true

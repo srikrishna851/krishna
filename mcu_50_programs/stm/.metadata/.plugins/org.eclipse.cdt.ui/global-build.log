@@ -1,0 +1,36 @@
+12:19:42 **** Incremental Build of configuration Debug for project ball_switch new ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:60:9: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+   60 |         sprintf(buffer, "Tilt State: %s\r\n", tiltState == GPIO_PIN_SET ? "Tilted" : "Not Tilted");
+      |         ^~~~~~~
+../Core/Src/main.c:5:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+    4 | #include <string.h>
+  +++ |+#include <stdio.h>
+    5 | 
+../Core/Src/main.c:60:9: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+   60 |         sprintf(buffer, "Tilt State: %s\r\n", tiltState == GPIO_PIN_SET ? "Tilted" : "Not Tilted");
+      |         ^~~~~~~
+../Core/Src/main.c:60:9: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:91:9: warning: "/*" within comment [-Wcomment]
+   91 |         /*********  CMD+WIFIMODE=1  **********/
+      |          
+../Core/Src/main.c:101:9: warning: "/*" within comment [-Wcomment]
+  101 |         /********* CMD+CONTOAP=SSID,PASSWD **********/
+      |          
+../Core/Src/main.c:112:9: warning: "/*" within comment [-Wcomment]
+  112 |         /********* CMD?WIFI**********/
+      |          
+arm-none-eabi-gcc -o "ball_switch new.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/manjunath/stm/ball_switch new/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ball_switch new.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ball_switch new.elf
+ 
+arm-none-eabi-size   ball_switch\ new.elf 
+arm-none-eabi-objdump -h -S  ball_switch\ new.elf  > "ball_switch new.list"
+   text	   data	    bss	    dec	    hex	filename
+  12056	    100	   2036	  14192	   3770	ball_switch new.elf
+Finished building: default.size.stdout
+ 
+Finished building: ball_switch new.list
+ 

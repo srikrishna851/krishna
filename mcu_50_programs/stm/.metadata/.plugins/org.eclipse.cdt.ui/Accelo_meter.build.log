@@ -1,0 +1,10 @@
+16:57:59 **** Incremental Build of configuration Debug for project Accelo_meter ****
+make -j4 all 
+arm-none-eabi-size   Accelo_meter.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3780	     12	   1616	   5408	   1520	Accelo_meter.elf
+Finished building: default.size.stdout
+ 
+
+16:57:59 Build Finished. 0 errors, 0 warnings. (took 172ms)
+

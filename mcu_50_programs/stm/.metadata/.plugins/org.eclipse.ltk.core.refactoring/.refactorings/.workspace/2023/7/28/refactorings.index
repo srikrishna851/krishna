@@ -1,0 +1,6 @@
+1689226168052	Delete resource 'LED_BLINK'
+1689316304105	Delete resource 'switch_led/Core/Src/gpio.c'
+1689316335010	Delete resource 'switch_led/Core/Src/gpio.h'
+1689318237424	Delete resource 'switch_led/Core/Src/gpio.c'
+1689397015681	Delete resource 'switch1_led/Core/Src/switch.c'
+1689397024106	Delete resource 'switch1_led/Core/Src/swich.h'

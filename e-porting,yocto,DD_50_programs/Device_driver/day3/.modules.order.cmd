@@ -1,0 +1,1 @@
+cmd_/home/srikrishna/Device_driver/day3/modules.order := {   echo /home/srikrishna/Device_driver/day3/module2.ko;   echo /home/srikrishna/Device_driver/day3/module1.ko; :; } | awk '!x[$$0]++' - > /home/srikrishna/Device_driver/day3/modules.order

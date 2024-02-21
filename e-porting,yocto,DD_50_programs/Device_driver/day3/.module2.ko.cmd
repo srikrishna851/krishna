@@ -1,0 +1,1 @@
+cmd_/home/srikrishna/Device_driver/day3/module2.ko := ld -r  -m elf_x86_64 -z noexecstack   --build-id=sha1  -T scripts/module.lds -o /home/srikrishna/Device_driver/day3/module2.ko /home/srikrishna/Device_driver/day3/module2.o /home/srikrishna/Device_driver/day3/module2.mod.o;  true

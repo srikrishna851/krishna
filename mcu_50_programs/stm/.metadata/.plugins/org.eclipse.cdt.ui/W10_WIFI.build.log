@@ -1,0 +1,78 @@
+19:21:27 **** Build of configuration Debug for project W10_WIFI ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'read_sensor_values':
+../Core/Src/main.c:83:19: error: 'AHT25_MEASURE_CMD' undeclared (first use in this function)
+   83 |     uint8_t cmd = AHT25_MEASURE_CMD;
+      |                   ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:83:19: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:85:30: error: 'hi2c1' undeclared (first use in this function); did you mean 'hi2c2'?
+   85 |     HAL_I2C_Master_Transmit(&hi2c1, AHT25_ADDR,&cmd, 1, HAL_MAX_DELAY);
+      |                              ^~~~~
+      |                              hi2c2
+../Core/Src/main.c:85:37: error: 'AHT25_ADDR' undeclared (first use in this function)
+   85 |     HAL_I2C_Master_Transmit(&hi2c1, AHT25_ADDR,&cmd, 1, HAL_MAX_DELAY);
+      |                                     ^~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:127:3: warning: implicit declaration of function 'WE10_Init' [-Wimplicit-function-declaration]
+  127 |   WE10_Init("ssk","colorful");
+      |   ^~~~~~~~~
+../Core/Src/main.c:128:6: warning: implicit declaration of function 'MQTT_Init' [-Wimplicit-function-declaration]
+  128 |      MQTT_Init();
+      |      ^~~~~~~~~
+../Core/Src/main.c: In function 'StateMachine':
+../Core/Src/main.c:187:13: error: 'state' undeclared (first use in this function)
+  187 |     switch (state) {
+      |             ^~~~~
+../Core/Src/main.c:188:12: error: 'STATE_INIT' undeclared (first use in this function)
+  188 |       case STATE_INIT:
+      |            ^~~~~~~~~~
+../Core/Src/main.c:194:15: error: 'STATE_READ_SENSOR' undeclared (first use in this function)
+  194 |         state=STATE_READ_SENSOR;
+      |               ^~~~~~~~~~~~~~~~~
+../Core/Src/main.c:199:23: error: 'STATE_PUBLISH_MQTT' undeclared (first use in this function)
+  199 |                 state=STATE_PUBLISH_MQTT;
+      |                       ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:207:11: warning: implicit declaration of function 'send_temp' [-Wimplicit-function-declaration]
+  207 |           send_temp(&argument);
+      |           ^~~~~~~~~
+../Core/Src/main.c:208:11: warning: implicit declaration of function 'recive_temp' [-Wimplicit-function-declaration]
+  208 |           recive_temp(&argument);
+      |           ^~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:218:6: warning: conflicting types for 'WE10_Init'; have 'void(char *, char *)'
+  218 | void WE10_Init (char *SSID, char *PASSWD)
+      |      ^~~~~~~~~
+../Core/Src/main.c:127:3: note: previous implicit declaration of 'WE10_Init' with type 'void(char *, char *)'
+  127 |   WE10_Init("ssk","colorful");
+      |   ^~~~~~~~~
+../Core/Src/main.c: In function 'WE10_Init':
+../Core/Src/main.c:243:30: warning: too many arguments for format [-Wformat-extra-args]
+  243 |         sprintf (&buffer[0], "CMD+CONTOAP=Redmi 9 power,11112222\r\n", SSID, PASSWD);
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:266:6: warning: conflicting types for 'MQTT_Init'; have 'void()'
+  266 | void MQTT_Init()
+      |      ^~~~~~~~~
+../Core/Src/main.c:128:6: note: previous implicit declaration of 'MQTT_Init' with type 'void()'
+  128 |      MQTT_Init();
+      |      ^~~~~~~~~
+../Core/Src/main.c: In function 'StartDefaultTask':
+../Core/Src/main.c:617:1: error: expected declaration or statement at end of input
+  617 | }
+      | ^
+At top level:
+../Core/Src/main.c:608:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
+  608 | void Error_Handler(void)
+      |      ^~~~~~~~~~~~~
+../Core/Src/main.c:586:6: warning: 'StartTask03' defined but not used [-Wunused-function]
+  586 | void StartTask03(void const * argument)
+      |      ^~~~~~~~~~~
+../Core/Src/main.c:530:6: warning: 'StartTask02' defined but not used [-Wunused-function]
+  530 | void StartTask02(void const * argument)
+      |      ^~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+19:21:27 Build Failed. 9 errors, 10 warnings. (took 316ms)
+

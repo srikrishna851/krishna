@@ -1,0 +1,10 @@
+15:34:40 **** Incremental Build of configuration Debug for project BUzzer_led_ball _switch ****
+make -j4 all 
+arm-none-eabi-size   BUzzer_led_ball\ _switch.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6696	     20	   1572	   8288	   2060	BUzzer_led_ball _switch.elf
+Finished building: default.size.stdout
+ 
+
+15:34:40 Build Finished. 0 errors, 0 warnings. (took 232ms)
+

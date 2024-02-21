@@ -1,0 +1,10 @@
+14:26:20 **** Build of configuration Debug for project Ball_swich ****
+make -j4 all 
+arm-none-eabi-size   Ball_swich.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6656	     20	   1572	   8248	   2038	Ball_swich.elf
+Finished building: default.size.stdout
+ 
+
+14:26:20 Build Finished. 0 errors, 0 warnings. (took 169ms)
+

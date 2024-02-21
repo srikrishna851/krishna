@@ -1,0 +1,10 @@
+16:57:59 **** Incremental Build of configuration Debug for project GSM ****
+make -j4 all 
+arm-none-eabi-size   GSM.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1536	     12	   1572	   3120	    c30	GSM.elf
+Finished building: default.size.stdout
+ 
+
+16:57:59 Build Finished. 0 errors, 0 warnings. (took 172ms)
+

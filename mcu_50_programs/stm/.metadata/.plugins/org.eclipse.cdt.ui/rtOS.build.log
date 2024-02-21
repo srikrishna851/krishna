@@ -1,0 +1,35 @@
+16:58:07 **** Incremental Build of configuration Debug for project rtOS ****
+make -j4 all 
+arm-none-eabi-gcc "../Third_Party/SEGGER/SEGGER/SEGGER_RTT.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I"/home/manjunath/stm/rtOS/Third_Party/FreeRTOS/Config" -I"/home/manjunath/stm/rtOS/Third_Party/FreeRTOS/portable/GCC/ARM_CM4F" -I"/home/manjunath/stm/rtOS/Third_Party/FreeRTOS/include" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Third_Party/SEGGER/SEGGER/SEGGER_RTT.d" -MT"Third_Party/SEGGER/SEGGER/SEGGER_RTT.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Third_Party/SEGGER/SEGGER/SEGGER_RTT.o"
+arm-none-eabi-gcc -mcpu=cortex-m4 -g -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Third_Party/SEGGER/SEGGER/SEGGER_RTT_ASM_ARMv7M.d" -MT"Third_Party/SEGGER/SEGGER/SEGGER_RTT_ASM_ARMv7M.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Third_Party/SEGGER/SEGGER/SEGGER_RTT_ASM_ARMv7M.o" "../Third_Party/SEGGER/SEGGER/SEGGER_RTT_ASM_ARMv7M.S"
+arm-none-eabi-gcc "../Third_Party/SEGGER/SEGGER/SEGGER_RTT_Syscalls_GCC.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I"/home/manjunath/stm/rtOS/Third_Party/FreeRTOS/Config" -I"/home/manjunath/stm/rtOS/Third_Party/FreeRTOS/portable/GCC/ARM_CM4F" -I"/home/manjunath/stm/rtOS/Third_Party/FreeRTOS/include" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Third_Party/SEGGER/SEGGER/SEGGER_RTT_Syscalls_GCC.d" -MT"Third_Party/SEGGER/SEGGER/SEGGER_RTT_Syscalls_GCC.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Third_Party/SEGGER/SEGGER/SEGGER_RTT_Syscalls_GCC.o"
+arm-none-eabi-gcc "../Third_Party/SEGGER/SEGGER/SEGGER_RTT_printf.c" -mcpu=cortex-m4 -std=gnu11 -g -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I"/home/manjunath/stm/rtOS/Third_Party/FreeRTOS/Config" -I"/home/manjunath/stm/rtOS/Third_Party/FreeRTOS/portable/GCC/ARM_CM4F" -I"/home/manjunath/stm/rtOS/Third_Party/FreeRTOS/include" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Third_Party/SEGGER/SEGGER/SEGGER_RTT_printf.d" -MT"Third_Party/SEGGER/SEGGER/SEGGER_RTT_printf.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Third_Party/SEGGER/SEGGER/SEGGER_RTT_printf.o"
+In file included from ../Third_Party/SEGGER/SEGGER/SEGGER_RTT_ASM_ARMv7M.S:18:
+../Third_Party/SEGGER/SEGGER/SEGGER_RTT.h:60:10: fatal error: SEGGER_RTT_Conf.h: No such file or directory
+   60 | #include "SEGGER_RTT_Conf.h"
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Third_Party/SEGGER/SEGGER/subdir.mk:37: Third_Party/SEGGER/SEGGER/SEGGER_RTT_ASM_ARMv7M.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../Third_Party/SEGGER/SEGGER/SEGGER_RTT_printf.c:54:
+../Third_Party/SEGGER/SEGGER/SEGGER_RTT.h:60:10: fatal error: SEGGER_RTT_Conf.h: No such file or directory
+   60 | #include "SEGGER_RTT_Conf.h"
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Third_Party/SEGGER/SEGGER/subdir.mk:35: Third_Party/SEGGER/SEGGER/SEGGER_RTT_printf.o] Error 1
+In file included from ../Third_Party/SEGGER/SEGGER/SEGGER_RTT.c:76:
+../Third_Party/SEGGER/SEGGER/SEGGER_RTT.h:60:10: fatal error: SEGGER_RTT_Conf.h: No such file or directory
+   60 | #include "SEGGER_RTT_Conf.h"
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Third_Party/SEGGER/SEGGER/subdir.mk:35: Third_Party/SEGGER/SEGGER/SEGGER_RTT.o] Error 1
+In file included from ../Third_Party/SEGGER/SEGGER/SEGGER_RTT_Syscalls_GCC.c:59:
+../Third_Party/SEGGER/SEGGER/SEGGER_RTT.h:60:10: fatal error: SEGGER_RTT_Conf.h: No such file or directory
+   60 | #include "SEGGER_RTT_Conf.h"
+      |          ^~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Third_Party/SEGGER/SEGGER/subdir.mk:35: Third_Party/SEGGER/SEGGER/SEGGER_RTT_Syscalls_GCC.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+16:58:07 Build Failed. 9 errors, 0 warnings. (took 222ms)
+

@@ -1,0 +1,65 @@
+#include "main.h"
+#include "cmsis_os.h"
+#include "stdio.h"
+#include "string.h"
+
+/* ... (other include and defines as in your original code) */
+
+// Define LED control GPIO (replace GPIOx and GPIO_PIN_LED)
+#define GPIO_PORT_LED       GPIOx
+#define GPIO_PIN_LED        GPIO_PIN_LED
+
+/* ... (other code as in your original code) */
+
+// Function to control the LED
+void controlLED(char command) {
+    if (command == '1') {
+        // Turn on the LED
+        HAL_GPIO_WritePin(GPIO_PORT_LED, GPIO_PIN_LED, GPIO_PIN_SET); // Replace GPIO_PORT_LED and GPIO_PIN_LED with your LED pin information
+    } else if (command == '0') {
+        // Turn off the LED
+        HAL_GPIO_WritePin(GPIO_PORT_LED, GPIO_PIN_LED, GPIO_PIN_RESET); // Replace GPIO_PORT_LED and GPIO_PIN_LED with your LED pin information
+    }
+}
+
+/* ... (other code as in your original code) */
+
+void recive_temp(void *argument) {
+    /* ... (existing code) */
+
+    char command;
+    if (xQueueReceive(myQueue01Handle, &command, portMAX_DELAY) == pdTRUE) {
+        controlLED(command); // Call the controlLED function with the received command
+    }
+
+    osDelay(1);
+}
+
+/* ... (other code as in your original code) */
+
+// Function to handle MQTT callback and LED control
+void MQTT_Callback(char* topic, uint8_t* payload, uint32_t length) {
+    /* ... (handle MQTT message and parse command) */
+
+    char receivedCommand = '1'; // Replace with the actual command received ('1' to turn on the LED, '0' to turn it off)
+    xQueueSendToBack(myQueue01Handle, &receivedCommand, portMAX_DELAY);
+}
+
+/* ... (other code as in your original code) */
+
+int main(void) {
+    /* ... (main function as in your original code) */
+
+    // Initialize MQTT and other components
+    WE10_Init("ssk", "colorful");
+    MQTT_Init();
+
+    /* ... (other code as in your original code) */
+
+    // Start scheduler
+    osKernelStart();
+
+    while (1) {
+        /* ... (main loop) */
+    }
+}

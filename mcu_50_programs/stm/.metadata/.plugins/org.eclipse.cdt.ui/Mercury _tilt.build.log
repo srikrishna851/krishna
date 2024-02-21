@@ -1,0 +1,10 @@
+15:03:04 **** Incremental Build of configuration Debug for project Mercury _tilt ****
+make -j4 all 
+arm-none-eabi-size   Mercury\ _tilt.elf 
+   text	   data	    bss	    dec	    hex	filename
+  13608	    100	   2036	  15744	   3d80	Mercury _tilt.elf
+Finished building: default.size.stdout
+ 
+
+15:03:05 Build Finished. 0 errors, 0 warnings. (took 174ms)
+

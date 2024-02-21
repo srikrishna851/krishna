@@ -1,0 +1,16 @@
+16:58:05 **** Incremental Build of configuration Debug for project interrupt ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/exti.d" -MT"Core/Src/exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/exti.o"
+../Core/Src/exti.c: In function 'pc13_exti_init':
+../Core/Src/exti.c:51:1: error: expected declaration or statement at end of input
+   51 | }
+      | ^
+At top level:
+../Core/Src/exti.c:41:6: warning: 'EXTI15_10_IRQHandler' defined but not used [-Wunused-function]
+   41 | void EXTI15_10_IRQHandler(void)
+      |      ^~~~~~~~~~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:37: Core/Src/exti.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+16:58:05 Build Failed. 2 errors, 1 warnings. (took 222ms)
+

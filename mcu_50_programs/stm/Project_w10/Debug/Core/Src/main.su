@@ -1,0 +1,14 @@
+../Core/Src/main.c:95:6:read_sensor_values	40	static
+../Core/Src/main.c:111:5:main	120	static
+../Core/Src/main.c:201:6:StateMachine	16	static
+../Core/Src/main.c:236:6:WE10_Init	144	static
+../Core/Src/main.c:284:6:MQTT_Init	136	static
+../Core/Src/main.c:338:6:SystemClock_Config	88	static
+../Core/Src/main.c:385:13:MX_I2C1_Init	8	static
+../Core/Src/main.c:419:13:MX_USART1_UART_Init	8	static
+../Core/Src/main.c:452:13:MX_USART2_UART_Init	8	static
+../Core/Src/main.c:485:13:MX_GPIO_Init	16	static
+../Core/Src/main.c:509:6:StartDefaultTask	16	static
+../Core/Src/main.c:527:6:recive_temp	120	static
+../Core/Src/main.c:583:6:send_temp	16	static
+../Core/Src/main.c:615:6:Error_Handler	4	static,ignoring_inline_asm

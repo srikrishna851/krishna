@@ -1,0 +1,4 @@
+../Core/Src/main.c:6:5:main	16	static
+../Core/Src/main.c:17:6:usart1_init	4	static
+../Core/Src/main.c:33:6:usart1_write	16	static
+../Core/Src/main.c:39:6:usart1_read	4	static

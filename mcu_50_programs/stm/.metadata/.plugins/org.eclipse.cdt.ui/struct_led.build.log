@@ -1,0 +1,64 @@
+16:58:07 **** Incremental Build of configuration Debug for project struct_led ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:6: warning: "GPIOA_BASE" redefined
+    6 | #define  GPIOA_BASE                                 (AHB1PERIPR_BASE +GPIOA_OFFSET)
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:156,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h:999: note: this is the location of the previous definition
+  999 | #define GPIOA_BASE            (AHB1PERIPH_BASE + 0x0000UL)
+      | 
+../Core/Src/main.c:7: warning: "RCC_OFFSET" redefined
+    7 | #define  RCC_OFFSET                                 (0X3800UL)
+      | 
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:275,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:287,
+                 from ../Core/Src/main.c:1:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h:1291: note: this is the location of the previous definition
+ 1291 | #define RCC_OFFSET                 (RCC_BASE - PERIPH_BASE)
+      | 
+../Core/Src/main.c:8: warning: "RCC_BASE" redefined
+    8 | #define  RCC_BASE                                   (AHB1PERIPR_BASE + RCC_OFFSET)
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:156,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h:1008: note: this is the location of the previous definition
+ 1008 | #define RCC_BASE              (AHB1PERIPH_BASE + 0x3800UL)
+      | 
+../Core/Src/main.c:26:15: error: expected ';' before 'typedef'
+   26 | }GPIOA_TypeDef
+      |               ^
+      |               ;
+   27 | typedef struct
+      | ~~~~~~~        
+../Core/Src/main.c:31:2: error: conflicting types for 'RCC_TypeDef'; have 'struct <anonymous>'
+   31 | }RCC_TypeDef;
+      |  ^~~~~~~~~~~
+In file included from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:156,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h:586:3: note: previous declaration of 'RCC_TypeDef' with type 'RCC_TypeDef'
+  586 | } RCC_TypeDef;
+      |   ^~~~~~~~~~~
+../Core/Src/main.c:33: warning: "GPIOA" redefined
+   33 | #define GPIOA                                      ((GPIO_TypeDef*)(GPIOA_BASE))
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:156,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h:1121: note: this is the location of the previous definition
+ 1121 | #define GPIOA               ((GPIO_TypeDef *) GPIOA_BASE)
+      | 
+../Core/Src/main.c:34: warning: "RCC" redefined
+   34 | #define RCC                                        ((RCC_TypeDef*)(RCC_BASE))
+      | 
+In file included from ../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h:156,
+                 from ../Core/Src/main.c:1:
+../Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f446xx.h:1130: note: this is the location of the previous definition
+ 1130 | #define RCC                 ((RCC_TypeDef *) RCC_BASE)
+      | 
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+
+16:58:07 Build Failed. 3 errors, 5 warnings. (took 227ms)
+

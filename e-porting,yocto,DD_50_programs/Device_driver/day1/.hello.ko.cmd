@@ -1,0 +1,1 @@
+cmd_/home/srikrishna/Device_driver/day1/hello.ko := arm-phytec-linux-gnueabi-ld -r  -EL  --build-id=sha1  -T scripts/module.lds -o /home/srikrishna/Device_driver/day1/hello.ko /home/srikrishna/Device_driver/day1/hello.o /home/srikrishna/Device_driver/day1/hello.mod.o;  true

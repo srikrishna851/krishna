@@ -1,0 +1,10 @@
+20:04:26 **** Incremental Build of configuration Debug for project BUzzer_switch_live ****
+make -j4 all 
+arm-none-eabi-size   BUzzer_switch_live.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12796	    100	   2044	  14940	   3a5c	BUzzer_switch_live.elf
+Finished building: default.size.stdout
+ 
+
+20:04:27 Build Finished. 0 errors, 0 warnings. (took 166ms)
+

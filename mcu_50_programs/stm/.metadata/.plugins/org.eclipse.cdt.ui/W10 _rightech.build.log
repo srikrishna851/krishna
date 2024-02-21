@@ -1,0 +1,10 @@
+16:58:04 **** Incremental Build of configuration Debug for project W10 _rightech ****
+make -j4 all 
+arm-none-eabi-size   W10\ _rightech.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1408	     12	   1572	   2992	    bb0	W10 _rightech.elf
+Finished building: default.size.stdout
+ 
+
+16:58:04 Build Finished. 0 errors, 0 warnings. (took 173ms)
+

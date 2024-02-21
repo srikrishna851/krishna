@@ -1,0 +1,37 @@
+10:58:04 **** Incremental Build of configuration Debug for project example_rtos ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:130:3: warning: implicit declaration of function 'WE10_Init' [-Wimplicit-function-declaration]
+  130 |   WE10_Init();
+      |   ^~~~~~~~~
+../Core/Src/main.c:131:6: warning: implicit declaration of function 'MQTT_Init' [-Wimplicit-function-declaration]
+  131 |      MQTT_Init();
+      |      ^~~~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:155:6: warning: conflicting types for 'WE10_Init'; have 'void()'
+  155 | void WE10_Init ()
+      |      ^~~~~~~~~
+../Core/Src/main.c:130:3: note: previous implicit declaration of 'WE10_Init' with type 'void()'
+  130 |   WE10_Init();
+      |   ^~~~~~~~~
+../Core/Src/main.c:203:6: warning: conflicting types for 'MQTT_Init'; have 'void()'
+  203 | void MQTT_Init()
+      |      ^~~~~~~~~
+../Core/Src/main.c:131:6: note: previous implicit declaration of 'MQTT_Init' with type 'void()'
+  131 |      MQTT_Init();
+      |      ^~~~~~~~~
+arm-none-eabi-gcc -o "example_rtos.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/manjunath/stm/example_rtos/STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="example_rtos.map" -Wl,--gc-sections -static -u _printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: example_rtos.elf
+ 
+arm-none-eabi-size   example_rtos.elf 
+arm-none-eabi-objdump -h -S  example_rtos.elf  > "example_rtos.list"
+   text	   data	    bss	    dec	    hex	filename
+  30888	    476	   2132	  33496	   82d8	example_rtos.elf
+Finished building: default.size.stdout
+ 
+Finished building: example_rtos.list
+ 
+
+10:58:05 Build Finished. 0 errors, 4 warnings. (took 421ms)
+
